@@ -18,6 +18,7 @@ drop table if exists HocSinh
 create table HocSinh (
 HS_ID varchar(20) not null primary key,
 HS_ten nvarchar(40),
+ngaysinh date,
 Lop_ID varchar(20) not null foreign key references Lop(Lop_ID)
 )
 
@@ -25,6 +26,7 @@ drop table if exists GiaoVien
 create table GiaoVien (
 GV_ID varchar(20) not null primary key,
 GV_ten nvarchar (40),
+GV_ngaysinh date,
 )
 
 drop table if exists TTGiangDay
