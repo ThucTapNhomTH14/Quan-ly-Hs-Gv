@@ -1,1 +1,12 @@
 c:\users\admin\documents\visual studio 2015\Projects\QuanLyHSSV\QuanLyHSSV\bin\Debug\QuanLyHSSV.exe.config
+C:\Users\Trung\Desktop\ThucTapNhom\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\bin\Debug\QuanLyHSSV.exe.config
+C:\Users\Trung\Desktop\ThucTapNhom\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\bin\Debug\QuanLyHSSV.exe
+C:\Users\Trung\Desktop\ThucTapNhom\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\bin\Debug\QuanLyHSSV.pdb
+C:\Users\Trung\Desktop\ThucTapNhom\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.csprojResolveAssemblyReference.cache
+C:\Users\Trung\Desktop\ThucTapNhom\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.Main.resources
+C:\Users\Trung\Desktop\ThucTapNhom\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.Properties.Resources.resources
+C:\Users\Trung\Desktop\ThucTapNhom\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.csproj.GenerateResource.Cache
+C:\Users\Trung\Desktop\ThucTapNhom\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.exe
+C:\Users\Trung\Desktop\ThucTapNhom\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.pdb
+C:\Users\Trung\Desktop\ThucTapNhom\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.formThemGV.resources
+C:\Users\Trung\Desktop\ThucTapNhom\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.formSuaGV.resources
