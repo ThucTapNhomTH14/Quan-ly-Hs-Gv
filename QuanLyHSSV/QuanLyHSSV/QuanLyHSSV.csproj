@@ -46,6 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="connectionString.cs" />
+    <Compile Include="formSuaGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formSuaGV.Designer.cs">
+      <DependentUpon>formSuaGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formThemGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formThemGV.Designer.cs">
+      <DependentUpon>formThemGV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +67,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formSuaGV.resx">
+      <DependentUpon>formSuaGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formThemGV.resx">
+      <DependentUpon>formThemGV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
