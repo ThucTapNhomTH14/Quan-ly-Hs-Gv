@@ -10,3 +10,17 @@ C:\Users\Trung\Desktop\ThucTapNhom\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug
 C:\Users\Trung\Desktop\ThucTapNhom\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.pdb
 C:\Users\Trung\Desktop\ThucTapNhom\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.formThemGV.resources
 C:\Users\Trung\Desktop\ThucTapNhom\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.formSuaGV.resources
+F:\Git-stuff\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\bin\Debug\QuanLyHSSV.exe.config
+F:\Git-stuff\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\bin\Debug\QuanLyHSSV.exe
+F:\Git-stuff\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\bin\Debug\QuanLyHSSV.pdb
+F:\Git-stuff\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.csprojResolveAssemblyReference.cache
+F:\Git-stuff\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.formSuaGV.resources
+F:\Git-stuff\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.formThemGV.resources
+F:\Git-stuff\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.Main.resources
+F:\Git-stuff\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.Properties.Resources.resources
+F:\Git-stuff\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.csproj.GenerateResource.cache
+F:\Git-stuff\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.csproj.CoreCompileInputs.cache
+F:\Git-stuff\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.exe
+F:\Git-stuff\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.pdb
+F:\Git-stuff\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.formSuaHS.resources
+F:\Git-stuff\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.formThemHS.resources

@@ -23,23 +23,36 @@ insert dbo.HocSinh(
 HS_ID,HS_ten,Lop_ID) values ('0005','Nguyen Hai Phuong','005')
 
 insert dbo.GiaoVien(
-GV_ID,GV_ten) values ('01','Ha Dai Duong')
+GV_ID,GV_ten,GV_ngaysinh) values ('gv001','Ha Dai Duong','8-8-1987')
 insert dbo.GiaoVien(
-GV_ID,GV_ten) values ('02','Nguyen Van Phuong')
+GV_ID,GV_ten,GV_ngaysinh) values ('gv002','Nguyen Van Phuong','8-8-1987')
 insert dbo.GiaoVien(
-GV_ID,GV_ten) values ('03','Bui Thu Ha')
+GV_ID,GV_ten,GV_ngaysinh) values ('gv003','Bui Thu Ha','8-8-1987')
 insert dbo.GiaoVien(
-GV_ID,GV_ten) values ('04','Le Thuy Duong')
+GV_ID,GV_ten,GV_ngaysinh) values ('gv004','Le Thuy Duong','8-8-1987')
 insert dbo.GiaoVien(
-GV_ID,GV_ten) values ('05','Bui Thu Huong')
+GV_ID,GV_ten,GV_ngaysinh) values ('gv005','Bui Thu Huong','8-8-1987')
 
 insert dbo.TTGiangDay(
-GV_ID,Lop_ID) values ('01','001')
+GV_ID,Lop_ID) values ('gv001','001')
 insert dbo.TTGiangDay(
-GV_ID,Lop_ID) values ('02','002')
+GV_ID,Lop_ID) values ('gv002','002')
 insert dbo.TTGiangDay(
-GV_ID,Lop_ID) values ('02','003')
+GV_ID,Lop_ID) values ('gv002','003')
 insert dbo.TTGiangDay(
-GV_ID,Lop_ID) values ('01','005')
+GV_ID,Lop_ID) values ('gv001','005')
 insert dbo.TTGiangDay(
-GV_ID,Lop_ID) values ('04','005')
+GV_ID,Lop_ID) values ('gv004','005')
+
+
+
+--xoa toan bo du lieu trong database
+EXEC sp_MSForEachTable 'ALTER TABLE ? NOCHECK CONSTRAINT ALL' 
+GO 
+
+EXEC sp_MSForEachTable 'DELETE FROM ?' 
+GO 
+
+-- enable referential integrity again 
+EXEC sp_MSForEachTable 'ALTER TABLE ? WITH CHECK CHECK CONSTRAINT ALL' 
+GO
