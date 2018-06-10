@@ -30,10 +30,10 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMaSV = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtNgaySinh = new System.Windows.Forms.TextBox();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -59,11 +59,11 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txtHoTen);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtNgaySinh);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtMaSV);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 26);
             this.groupBox1.Name = "groupBox1";
@@ -82,12 +82,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã sinh viên";
             // 
-            // textBox1
+            // txtMaSV
             // 
-            this.textBox1.Location = new System.Drawing.Point(81, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(131, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtMaSV.Location = new System.Drawing.Point(81, 20);
+            this.txtMaSV.Name = "txtMaSV";
+            this.txtMaSV.Size = new System.Drawing.Size(155, 20);
+            this.txtMaSV.TabIndex = 0;
             // 
             // label2
             // 
@@ -98,24 +98,24 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Ngày sinh";
             // 
-            // textBox2
+            // txtNgaySinh
             // 
-            this.textBox2.Location = new System.Drawing.Point(81, 46);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(131, 20);
-            this.textBox2.TabIndex = 1;
+            this.txtNgaySinh.Location = new System.Drawing.Point(81, 46);
+            this.txtNgaySinh.Name = "txtNgaySinh";
+            this.txtNgaySinh.Size = new System.Drawing.Size(155, 20);
+            this.txtNgaySinh.TabIndex = 2;
             // 
-            // textBox3
+            // txtHoTen
             // 
-            this.textBox3.Location = new System.Drawing.Point(321, 20);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(131, 20);
-            this.textBox3.TabIndex = 3;
+            this.txtHoTen.Location = new System.Drawing.Point(297, 20);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(155, 20);
+            this.txtHoTen.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(262, 23);
+            this.label3.Location = new System.Drawing.Point(244, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 2;
@@ -124,7 +124,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(262, 49);
+            this.label4.Location = new System.Drawing.Point(244, 49);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 2;
@@ -132,9 +132,9 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(321, 46);
+            this.textBox4.Location = new System.Drawing.Point(297, 46);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(131, 20);
+            this.textBox4.Size = new System.Drawing.Size(155, 20);
             this.textBox4.TabIndex = 3;
             // 
             // textBox5
@@ -142,7 +142,7 @@
             this.textBox5.Location = new System.Drawing.Point(81, 72);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(371, 20);
-            this.textBox5.TabIndex = 5;
+            this.textBox5.TabIndex = 4;
             // 
             // label5
             // 
@@ -158,9 +158,10 @@
             this.btnCancel.Location = new System.Drawing.Point(434, 302);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
-            this.btnCancel.TabIndex = 9;
+            this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Thoát";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // groupBox2
             // 
@@ -175,7 +176,7 @@
             this.groupBox2.Location = new System.Drawing.Point(13, 154);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(483, 142);
-            this.groupBox2.TabIndex = 10;
+            this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin cha mẹ";
             // 
@@ -184,7 +185,7 @@
             this.textBox6.Location = new System.Drawing.Point(80, 23);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(371, 20);
-            this.textBox6.TabIndex = 7;
+            this.textBox6.TabIndex = 0;
             // 
             // label6
             // 
@@ -209,7 +210,7 @@
             this.textBox7.Location = new System.Drawing.Point(80, 49);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(371, 20);
-            this.textBox7.TabIndex = 7;
+            this.textBox7.TabIndex = 1;
             // 
             // label8
             // 
@@ -225,7 +226,7 @@
             this.textBox8.Location = new System.Drawing.Point(80, 75);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(371, 20);
-            this.textBox8.TabIndex = 7;
+            this.textBox8.TabIndex = 2;
             // 
             // label9
             // 
@@ -241,7 +242,7 @@
             this.textBox9.Location = new System.Drawing.Point(80, 101);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(371, 20);
-            this.textBox9.TabIndex = 7;
+            this.textBox9.TabIndex = 3;
             // 
             // formLyLichHocSinh
             // 
@@ -269,11 +270,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtNgaySinh;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMaSV;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.GroupBox groupBox2;

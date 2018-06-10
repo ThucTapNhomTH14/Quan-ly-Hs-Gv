@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuanLyHSSV.DAO;
+using QuanLyHSSV.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,9 @@ namespace QuanLyHSSV
     public partial class Main : Form
     {
         public static string connection = connectionString.ConnectionString;
+
+        public SinhVien SinvienDAO { get; private set; }
+
         public Main()
         {
             InitializeComponent();
@@ -230,8 +235,10 @@ namespace QuanLyHSSV
 
         private void mainDGV_Click(object sender, EventArgs e)
         {
-            string idSV = (string)mainDGV.SelectedCells[0].OwningRow.Cells["mã học sinh"].Value; 
-            
+            string idSV = (string)mainDGV.SelectedCells[0].OwningRow.Cells["mã học sinh"].Value;
+            SinhVien sv1 = SinhVienDAO.Instance.GetSinhVienByID(idSV);
+            formLyLichHocSinh f = new formLyLichHocSinh(sv1);
+            f.ShowDialog();
         }
 
         //    //private void HS_txtSearch_TextChanged(object sender, EventArgs e)
