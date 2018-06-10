@@ -10,3 +10,5 @@ C:\Users\Trung\Desktop\ThucTapNhom\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug
 C:\Users\Trung\Desktop\ThucTapNhom\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.pdb
 C:\Users\Trung\Desktop\ThucTapNhom\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.formThemGV.resources
 C:\Users\Trung\Desktop\ThucTapNhom\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.formSuaGV.resources
+C:\Users\Trung\Desktop\ThucTapNhom\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.formThemHS.resources
+C:\Users\Trung\Desktop\ThucTapNhom\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.formSuaHS.resources

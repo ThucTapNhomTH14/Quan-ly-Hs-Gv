@@ -20,6 +20,7 @@ namespace QuanLyHSSV
             InitializeComponent();
             toggle_GV_off();
             toggle_HS_off();
+            toggle_Class_off();
         }
 
         private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
@@ -35,6 +36,7 @@ namespace QuanLyHSSV
         {
             toggle_GV_on();
             toggle_HS_off();
+            toggle_Class_off();
             
             refresh_GV(-1);
         }
@@ -155,8 +157,9 @@ namespace QuanLyHSSV
 
         private void lýLịchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            toggle_GV_off();
             toggle_HS_on();
+            toggle_GV_off();
+            toggle_Class_off();
 
             refresh_HS(-1);
         }
@@ -185,6 +188,30 @@ namespace QuanLyHSSV
             {
                 HS_DGV.Rows[row - 1].Selected = true;
             }
+        }
+
+        private void btn_HS_add_Click(object sender, EventArgs e)
+        {
+            int row = HS_DGV.CurrentCell.RowIndex;
+            formThemHS f = new formThemHS();
+            f.ShowDialog();
+
+            refresh_HS(row);
+        }
+
+        private void btn_HS_edit_Click(object sender, EventArgs e)
+        {
+            int row = HS_DGV.CurrentCell.RowIndex;
+            string id = HS_DGV.Rows[row].Cells[0].Value.ToString();
+            string name = HS_DGV.Rows[row].Cells[1].Value.ToString();
+            string bd = HS_DGV.Rows[row].Cells[2].Value.ToString();
+            string classname = HS_DGV.Rows[row].Cells[3].Value.ToString();
+            DateTime birth;
+            DateTime.TryParseExact(bd, "dd/MM/yyyy", null, DateTimeStyles.None, out birth);
+            formSuaHS f = new formSuaHS(id, name, birth, classname);
+            f.ShowDialog();
+
+            refresh_HS(row);
         }
 
         private void btn_HS_delete_Click(object sender, EventArgs e)
@@ -225,7 +252,122 @@ namespace QuanLyHSSV
         /*
         Hien thi danh sach lop va giao vien chu nhiem
         */
+        private void toggle_Class_on()
+        {
+            panelLop.Visible = true;
+        }
+        private void toggle_Class_off()
+        {
+            panelLop.Visible = false;
+        }
 
+        private void danhSáchHọcSinhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            toggle_Class_on();
+            toggle_GV_off();
+            toggle_HS_off();
+            initKhoa(cbKhoa);
+        }
 
+        private void initKhoa(ComboBox cb)
+        {
+            DataTable dt = new DataTable();
+            string query = "select convert(varchar(10),nam_bd)+' - '+convert(varchar(10),nam_kt) as khoa from Khoa";
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = query;
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                cmd.ExecuteNonQuery();
+                da.Fill(dt);
+                conn.Close();
+            }
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                cb.Items.Add(dt.Rows[i]["khoa"].ToString());
+            }
+        }
+
+        private void initLop(ComboBox cb,int indexKhoa)
+        {
+            DataTable dt = new DataTable();
+            string query = "select Lop_ten from Lop where khoa_ID = '"+indexKhoa+"'";
+            using (SqlConnection conn = new SqlConnection(connection))
+            {
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandText = query;
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                cmd.ExecuteNonQuery();
+                da.Fill(dt);
+                conn.Close();
+            }
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                cb.Items.Add(dt.Rows[i]["Lop_ten"].ToString());
+            }
+        }
+
+        private void cbKhoa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int indexKhoa = cbKhoa.SelectedIndex + 1;
+            cbLop.Items.Clear();
+            initLop(cbLop, indexKhoa);          
+        }
+
+        private void cbLop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int indexKhoa = cbKhoa.SelectedIndex + 1;
+            string tenLop = cbLop.SelectedItem.ToString();
+
+            DataTable dt = new DataTable();
+            using (SqlConnection con = new SqlConnection(connection))
+            {
+                SqlCommand cmd = con.CreateCommand();
+                SqlCommand gvcn = con.CreateCommand();
+
+                cmd.CommandText = "exec HS_List @khoa_ID,@tenlop";
+                cmd.Parameters.Add("@khoa_ID", SqlDbType.Int).Value = indexKhoa;
+                cmd.Parameters.Add("@tenlop", SqlDbType.NVarChar, 20).Value = tenLop;
+
+                gvcn.CommandText = @"select A.GV_ten from GiaoVien as A
+                                    inner join TTGiangDay as B on A.GV_ID = B.GV_ID
+                                    inner join Lop as C on C.Lop_ID = B.Lop_ID
+                                    where C.Lop_ten ='" + tenLop + "' and C.khoa_ID ='" + indexKhoa+"'";
+
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                cmd.ExecuteNonQuery();
+                txtGVCN.Text = gvcn.ExecuteScalar().ToString();
+                da.Fill(dt);
+                Lop_DGV.DataSource = dt;
+                con.Close();
+            }
+        }
+
+        private void txtSearchHS_TextChanged(object sender, EventArgs e)
+        {
+            int indexKhoa = cbKhoa.SelectedIndex + 1;
+            string tenLop = cbLop.SelectedItem.ToString();
+            string searchString = txtSearchHS.Text;
+
+            DataTable dt = new DataTable();
+            using (SqlConnection con = new SqlConnection(connection))
+            {
+                SqlCommand cmd = con.CreateCommand();               
+                cmd.CommandText = "exec search_HS_List @search,@khoa_ID,@lop_ten";
+                cmd.Parameters.Add("@search",SqlDbType.NVarChar,40).Value = searchString;
+                cmd.Parameters.Add("@khoa_ID", SqlDbType.Int).Value = indexKhoa;
+                cmd.Parameters.Add("@lop_ten", SqlDbType.NVarChar, 20).Value = tenLop;
+
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                cmd.ExecuteNonQuery();
+                da.Fill(dt);
+                Lop_DGV.DataSource = dt;
+                con.Close();
+            }
+        }
     }
 }
