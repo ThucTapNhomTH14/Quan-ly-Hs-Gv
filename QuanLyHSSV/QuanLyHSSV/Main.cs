@@ -223,6 +223,11 @@ namespace QuanLyHSSV
             refresh_HS(row - 1);
         }
 
+        private void lớpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //    //private void HS_txtSearch_TextChanged(object sender, EventArgs e)
         //    //{
         //    //    DataTable dt = new DataTable();

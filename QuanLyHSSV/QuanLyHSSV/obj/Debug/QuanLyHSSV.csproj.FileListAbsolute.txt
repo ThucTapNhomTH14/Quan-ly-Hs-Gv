@@ -24,3 +24,16 @@ F:\Git-stuff\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.exe
 F:\Git-stuff\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.pdb
 F:\Git-stuff\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.formSuaHS.resources
 F:\Git-stuff\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.formThemHS.resources
+D:\1ME\1Codeme\3.CodeThucTapNhom\QuanLyHocSinh\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\bin\Debug\QuanLyHSSV.exe.config
+D:\1ME\1Codeme\3.CodeThucTapNhom\QuanLyHocSinh\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.exe
+D:\1ME\1Codeme\3.CodeThucTapNhom\QuanLyHocSinh\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.pdb
+D:\1ME\1Codeme\3.CodeThucTapNhom\QuanLyHocSinh\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.csprojResolveAssemblyReference.cache
+D:\1ME\1Codeme\3.CodeThucTapNhom\QuanLyHocSinh\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.formSuaHS.resources
+D:\1ME\1Codeme\3.CodeThucTapNhom\QuanLyHocSinh\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.formSuaGV.resources
+D:\1ME\1Codeme\3.CodeThucTapNhom\QuanLyHocSinh\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.formThemHS.resources
+D:\1ME\1Codeme\3.CodeThucTapNhom\QuanLyHocSinh\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.formThemGV.resources
+D:\1ME\1Codeme\3.CodeThucTapNhom\QuanLyHocSinh\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.Main.resources
+D:\1ME\1Codeme\3.CodeThucTapNhom\QuanLyHocSinh\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.Properties.Resources.resources
+D:\1ME\1Codeme\3.CodeThucTapNhom\QuanLyHocSinh\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.csproj.GenerateResource.Cache
+D:\1ME\1Codeme\3.CodeThucTapNhom\QuanLyHocSinh\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\bin\Debug\QuanLyHSSV.exe
+D:\1ME\1Codeme\3.CodeThucTapNhom\QuanLyHocSinh\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\bin\Debug\QuanLyHSSV.pdb
