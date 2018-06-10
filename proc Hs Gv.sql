@@ -23,9 +23,9 @@ values (@ID,@ten,@birth)
 end
 
 go
-exec ThemGiaoVien 'a', '1912-10-25'
-select * from GiaoVien
-go
+--exec ThemGiaoVien 'a', '1912-10-25'
+--select * from GiaoVien
+--go
 
 drop proc if exists SuaGiaoVien
 go
@@ -73,20 +73,29 @@ go
 
 
 
-drop proc if exists ThemSinhVien
+drop proc if exists ThemHocSinh
 go
-create proc ThemSinhVien(@ID varchar(20),@ten nvarchar(20),@lop varchar(20),@birth date=null)
+create proc ThemHocSinh(@ten nvarchar(40),@birth date,@lop nvarchar(20))
 as
-if exists (select Lop_ID from Lop where @lop = Lop_ID) 
 begin
-insert into HocSinh(HS_ID,HS_ten,Lop_ID,ngaysinh)
-values (@ID,@ten,@lop,@birth)
+declare @idlop nvarchar(20) = (select Lop_ID from Lop where @lop = Lop_ten)
+declare @ID varchar(10) = 'gv001'
+declare @i int = 1
+while exists (select HS_ID from HocSinh where HS_ID=@ID)
+begin
+select @i = @i +1
+select @ID = 
+case 
+when @i < 10 then 'hs00'+ convert(varchar(10),@i)
+when @i >= 10 and @i <100 then 'hs0'+ convert(varchar(10),@i)
+when @i >= 100 and @i <1000 then 'hs'+ convert(varchar(10),@i)
 end
-else begin
-print N'error, no class is founded';
+end
+insert into HocSinh(HS_ID,HS_ten,ngaysinh,Lop_ID)
+values (@ID,@ten,@birth,@idlop)
 end
 
-
+go
 drop proc if exists SuaHocSinh
 go
 create proc SuaHocSinh(@ID varchar(20),@ten nvarchar(20),@lop varchar(20),@birth date=null)
@@ -136,9 +145,9 @@ inner join Lop on Lop.Lop_ID = HocSinh.Lop_ID
 end
 
 
-use [Quan ly Hs Gv]
-select * from GiaoVien
+--use [Quan ly Hs Gv]
+--select * from GiaoVien
 
-exec getHocSinh
-exec SuaHocSinh '0006','Pham Hong Son','006'
-exec ThemSinhVien '0006','Pham Hoang Son','005'
+--exec getHocSinh
+--exec SuaHocSinh '0006','Pham Hong Son','006'
+--exec ThemSinhVien '0006','Pham Hoang Son','005'

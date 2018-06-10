@@ -143,7 +143,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "formThemHS";
-            this.Text = "Thêm giáo viên";
+            this.Text = "Thêm học sinh";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,15 +151,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker_birthday;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_ID;
-        private System.Windows.Forms.TextBox txt_name;
-        private System.Windows.Forms.Button btn_confirm;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.DateTimePicker dateTimePicker_birthday;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.TextBox txt_ID;
+        public System.Windows.Forms.TextBox txt_name;
+        public System.Windows.Forms.Button btn_confirm;
+        public System.Windows.Forms.Button btnCancel;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.ComboBox comboBox1;
     }
 }

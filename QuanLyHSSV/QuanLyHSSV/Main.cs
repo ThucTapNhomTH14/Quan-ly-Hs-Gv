@@ -76,14 +76,14 @@ namespace QuanLyHSSV
             GV_btn_add.Visible = true;
             GV_btn_delete.Visible = true;
             GV_btn_update.Visible = true;
-            GV_txtSearch.Visible = true;
+            //GV_txtSearch.Visible = true;
         }
         private void toggle_GV_off()
         {
             GV_btn_add.Visible = false;
             GV_btn_delete.Visible = false;
             GV_btn_update.Visible = false;
-            GV_txtSearch.Visible = false;
+            //GV_txtSearch.Visible = false;
         }
 
         private void GV_btn_delete_Click(object sender, EventArgs e)
@@ -147,7 +147,7 @@ namespace QuanLyHSSV
         /*/////////////////////////////////////////////////////////////////////////////
         MODULE HOC SINH
         */
-        //xem list GV
+        //xem list 
         private void lýLịchToolStripMenuItem_Click(object sender, EventArgs e)
         {
             toggle_HS_on();
@@ -160,7 +160,6 @@ namespace QuanLyHSSV
             using (SqlConnection con = new SqlConnection(connection))
             {
                 SqlCommand cmd = con.CreateCommand();
-                //select tu View nen phai chay query tao view nhe
                 cmd.CommandText = "exec getHocSinh";
 
                 con.Open();
@@ -179,13 +178,41 @@ namespace QuanLyHSSV
                 mainDGV.Rows[row - 1].Selected = true;
             }
         }
-        ////them hoc sinh
-        //private void HS_btn_add_Click(object sender, EventArgs e)
-        //{
-        //    formThemHS f = new formThemHS();
-        //    f.ShowDialog();
-        //    refresh_HS(mainDGV.Rows.Count);
-        //}
+
+        private void InitClass(ComboBox cb)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection con = new SqlConnection(connection))
+            {
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandText = "select Lop_ten from Lop";
+
+                con.Open();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                cmd.ExecuteNonQuery();
+                da.Fill(dt);
+                mainDGV.DataSource = dt;
+                con.Close();
+            }
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                cb.Items.Add(dt.Rows[i]["Lop_ten"].ToString());
+            }
+        }
+
+
+
+        //them hoc sinh
+        private void HS_btn_add_Click(object sender, EventArgs e)
+        {
+            formThemHS f = new formThemHS();
+
+            InitClass(f.comboBox1);
+
+            f.ShowDialog();
+            refresh_HS(mainDGV.Rows.Count);
+        }
 
         //toggle HS component visibility
         private void toggle_HS_on()
