@@ -251,18 +251,18 @@ namespace QuanLyHSSV
         //    //    }
         //    //}
 
-        private void HS_btn_update_Click(object sender, EventArgs e)
-        {
-            int row = mainDGV.CurrentCell.RowIndex;
-            string id = mainDGV.Rows[row].Cells[0].Value.ToString();
-            string name = mainDGV.Rows[row].Cells[1].Value.ToString();
-            string bd = mainDGV.Rows[row].Cells[2].Value.ToString();
-            DateTime birth;
-            DateTime.TryParseExact(bd, "dd/MM/yyyy", null, DateTimeStyles.None, out birth);
-            formSuaHS f = new formSuaHS(id, name, birth);
-            f.ShowDialog();
-            refresh_HS(row);
-        }
+        //private void HS_btn_update_Click(object sender, EventArgs e)
+        //{
+        //    int row = mainDGV.CurrentCell.RowIndex;
+        //    string id = mainDGV.Rows[row].Cells[0].Value.ToString();
+        //    string name = mainDGV.Rows[row].Cells[1].Value.ToString();
+        //    string bd = mainDGV.Rows[row].Cells[2].Value.ToString();
+        //    DateTime birth;
+        //    DateTime.TryParseExact(bd, "dd/MM/yyyy", null, DateTimeStyles.None, out birth);
+        //    formSuaHS f = new formSuaHS(id, name, birth);
+        //    f.ShowDialog();
+        //    refresh_HS(row);
+        //}
 
         //    ////////////////////////////////////////////////////////////////////////
     }

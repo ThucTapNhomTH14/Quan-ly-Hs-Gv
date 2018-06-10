@@ -1,5 +1,9 @@
-use [Quan ly Hs Gv]
+ï»¿use [Quan ly Hs Gv]
 go
-
+drop view if exists GV
+go
 create view GV as
-select GV_ID as N'Mã giáo viên',GV_ten as N'Tên giáo viên', FORMAT(GV_ngaysinh,'dd/MM/yyyy') as N'Ngày sinh' from GiaoVien
+select GiaoVien.GV_ID as N'MÃ£ giÃ¡o viÃªn', GiaoVien.GV_ten as N'TÃªn giÃ¡o viÃªn', FORMAT(GiaoVien.GV_ngaysinh,'dd/MM/yyyy') as N'NgÃ y sinh', Lop.Lop_ten as N'Lá»›p'
+from GiaoVien
+inner join TTGiangDay on TTGiangDay.GV_ID = GiaoVien.GV_ID
+inner join Lop on TTGiangDay.Lop_ID = Lop.Lop_ID

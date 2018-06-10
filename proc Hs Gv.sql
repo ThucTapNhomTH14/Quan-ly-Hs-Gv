@@ -1,15 +1,30 @@
-use [Quan ly Hs Gv]
+﻿use [Quan ly Hs Gv]
 go
 
 drop proc if exists ThemGiaoVien
 go
-create proc ThemGiaoVien(@ID varchar(20),@ten nvarchar(20),@birth date)
+create proc ThemGiaoVien(@ten nvarchar(40),@birth date)
 as
 begin
+declare @ID varchar(10) = 'gv001'
+declare @i int = 1
+while exists (select GV_ID from GiaoVien where GV_ID=@ID)
+begin
+select @i = @i +1
+select @ID = 
+case 
+when @i < 10 then 'gv00'+ convert(varchar(10),@i)
+when @i >= 10 and @i <100 then 'gv0'+ convert(varchar(10),@i)
+when @i >= 100 and @i <1000 then 'gv'+ convert(varchar(10),@i)
+end
+end
 insert into GiaoVien(GV_ID,GV_ten,GV_ngaysinh)
 values (@ID,@ten,@birth)
 end
 
+go
+exec ThemGiaoVien 'a', '1912-10-25'
+select * from GiaoVien
 go
 
 drop proc if exists SuaGiaoVien
@@ -110,11 +125,20 @@ end
 go
 
 
+drop proc if exists getHocSinh
+go
+create proc getHocSinh
+as
+begin
+select HocSinh.HS_ID as N'Mã học sinh', HocSinh.HS_ten as N'Tên học sinh', HocSinh.ngaysinh as N'Ngày sinh', Lop.Lop_ten as N'Lớp'
+from HocSinh
+inner join Lop on Lop.Lop_ID = HocSinh.Lop_ID
+end
 
 
 use [Quan ly Hs Gv]
-select * from HocSinh
+select * from GiaoVien
 
-
+exec getHocSinh
 exec SuaHocSinh '0006','Pham Hong Son','006'
 exec ThemSinhVien '0006','Pham Hoang Son','005'
