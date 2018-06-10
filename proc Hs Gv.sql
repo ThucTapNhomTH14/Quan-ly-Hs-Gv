@@ -10,6 +10,8 @@ insert into GiaoVien(GV_ID,GV_ten,GV_ngaysinh)
 values (@ID,@ten,@birth)
 end
 
+go
+
 drop proc if exists SuaGiaoVien
 go
 create proc SuaGiaoVien(@ID varchar(20),@ten nvarchar(20),@birth date)
@@ -18,6 +20,8 @@ begin
 update GiaoVien set GV_ten=@ten,GV_ngaysinh=@birth where @ID=GV_ID
 end
 
+go
+
 drop proc if exists XoaGiaoVien
 go
 create proc XoaGiaoVien(@ID varchar(20)=null,@ten nvarchar(20)=null,@birth date=null)
@@ -25,6 +29,8 @@ as
 begin
 delete from GiaoVien where @ID=GV_ID
 end
+
+go
 
 drop proc if exists TimGiaoVien
 go
@@ -36,6 +42,8 @@ where @ID=GV_ID or @ten=GV_ten or @birth=GV_ngaysinh or
 (@ID=GV_ID and @ten=GV_ten) or
 (@ID=GV_ID and @ten=GV_ten and @birth=GV_ngaysinh)
 end
+
+go
 
 --drop proc if exists TimLop
 --go
@@ -77,12 +85,17 @@ update HocSinh set HS_ten=@ten, ngaysinh=@birth where HS_ID=@ID
 print N'no class is founded'
 end
 
+go
+
 drop proc if exists XoaHocSinh
 go
 create proc XoaHocSinh(@ID varchar(20),@ten nvarchar(20)=null,@lop varchar(20)=null,@birth date=null)
 as begin
 delete from HocSinh where HS_ID=@ID
 end
+
+go
+
 
 drop proc if exists TimHocSinh
 go
@@ -93,6 +106,9 @@ where @ID=HS_ID or @ten=HS_ten or @lop=Lop_ID or @birth=ngaysinh or
 (@ID=HS_ID and @ten=HS_ten) or
 (@ID=HS_ID and @ten=HS_ten and @birth=ngaysinh)
 end
+
+go
+
 
 
 
