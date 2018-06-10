@@ -37,3 +37,4 @@ D:\1ME\1Codeme\3.CodeThucTapNhom\QuanLyHocSinh\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHS
 D:\1ME\1Codeme\3.CodeThucTapNhom\QuanLyHocSinh\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.csproj.GenerateResource.Cache
 D:\1ME\1Codeme\3.CodeThucTapNhom\QuanLyHocSinh\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\bin\Debug\QuanLyHSSV.exe
 D:\1ME\1Codeme\3.CodeThucTapNhom\QuanLyHocSinh\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\bin\Debug\QuanLyHSSV.pdb
+D:\1ME\1Codeme\3.CodeThucTapNhom\QuanLyHocSinh\Quan-ly-Hs-Gv\QuanLyHSSV\QuanLyHSSV\obj\Debug\QuanLyHSSV.formLyLichHocSinh.resources

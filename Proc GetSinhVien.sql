@@ -1,0 +1,6 @@
+CREATE PROC GetsinhVienByID
+@id VARCHAR(20) AS
+BEGIN
+	SELECT * FROM dbo.HocSinh WHERE HS_ID=@id
+END	
+GO	

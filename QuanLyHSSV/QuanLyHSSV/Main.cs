@@ -228,6 +228,12 @@ namespace QuanLyHSSV
 
         }
 
+        private void mainDGV_Click(object sender, EventArgs e)
+        {
+            string idSV = (string)mainDGV.SelectedCells[0].OwningRow.Cells["mã học sinh"].Value; 
+            
+        }
+
         //    //private void HS_txtSearch_TextChanged(object sender, EventArgs e)
         //    //{
         //    //    DataTable dt = new DataTable();

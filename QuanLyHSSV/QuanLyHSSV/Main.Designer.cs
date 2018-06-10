@@ -197,6 +197,7 @@
             this.mainDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.mainDGV.Size = new System.Drawing.Size(849, 408);
             this.mainDGV.TabIndex = 1;
+            this.mainDGV.Click += new System.EventHandler(this.mainDGV_Click);
             // 
             // label1
             // 
