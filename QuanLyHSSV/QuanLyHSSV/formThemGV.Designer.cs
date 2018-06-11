@@ -28,24 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker_birthday = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_ID = new System.Windows.Forms.TextBox();
             this.txt_name = new System.Windows.Forms.TextBox();
             this.btn_confirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã giáo viên";
             // 
             // label2
             // 
@@ -73,13 +62,6 @@
             this.label3.Size = new System.Drawing.Size(54, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Ngày sinh";
-            // 
-            // txt_ID
-            // 
-            this.txt_ID.Location = new System.Drawing.Point(104, 37);
-            this.txt_ID.Name = "txt_ID";
-            this.txt_ID.Size = new System.Drawing.Size(168, 20);
-            this.txt_ID.TabIndex = 4;
             // 
             // txt_name
             // 
@@ -112,15 +94,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 221);
+            this.ClientSize = new System.Drawing.Size(292, 219);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btn_confirm);
             this.Controls.Add(this.txt_name);
-            this.Controls.Add(this.txt_ID);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dateTimePicker_birthday);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "formThemGV";
             this.Text = "Thêm giáo viên";
             this.ResumeLayout(false);
@@ -129,12 +109,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker_birthday;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txt_ID;
         private System.Windows.Forms.TextBox txt_name;
         private System.Windows.Forms.Button btn_confirm;
         private System.Windows.Forms.Button btnCancel;
