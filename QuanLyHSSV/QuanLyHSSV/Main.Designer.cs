@@ -50,9 +50,6 @@
             this.GV_btn_delete = new System.Windows.Forms.Button();
             this.GV_btn_update = new System.Windows.Forms.Button();
             this.GV_btn_add = new System.Windows.Forms.Button();
-            this.HS_btn_add = new System.Windows.Forms.Button();
-            this.HS_btn_update = new System.Windows.Forms.Button();
-            this.HS_btn_delete = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mainDGV)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +65,7 @@
             this.hệThốngToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(873, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(720, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -97,9 +94,8 @@
             // lýLịchToolStripMenuItem
             // 
             this.lýLịchToolStripMenuItem.Name = "lýLịchToolStripMenuItem";
-            this.lýLịchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lýLịchToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.lýLịchToolStripMenuItem.Text = "Lý lịch";
-            this.lýLịchToolStripMenuItem.Click += new System.EventHandler(this.lýLịchToolStripMenuItem_Click);
             // 
             // giáoViênToolStripMenuItem
             // 
@@ -113,14 +109,14 @@
             // hồSơToolStripMenuItem
             // 
             this.hồSơToolStripMenuItem.Name = "hồSơToolStripMenuItem";
-            this.hồSơToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.hồSơToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.hồSơToolStripMenuItem.Text = "Hồ sơ";
             this.hồSơToolStripMenuItem.Click += new System.EventHandler(this.hồSơToolStripMenuItem_Click);
             // 
             // thêmToolStripMenuItem
             // 
             this.thêmToolStripMenuItem.Name = "thêmToolStripMenuItem";
-            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.thêmToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.thêmToolStripMenuItem.Text = "Thêm";
             // 
             // tìmKiếmToolStripMenuItem
@@ -188,19 +184,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainDGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.mainDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.mainDGV.Location = new System.Drawing.Point(12, 192);
+            this.mainDGV.Location = new System.Drawing.Point(12, 206);
             this.mainDGV.MultiSelect = false;
             this.mainDGV.Name = "mainDGV";
             this.mainDGV.ReadOnly = true;
             this.mainDGV.RowHeadersVisible = false;
             this.mainDGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.mainDGV.Size = new System.Drawing.Size(849, 408);
+            this.mainDGV.Size = new System.Drawing.Size(696, 312);
             this.mainDGV.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 73);
+            this.label1.Location = new System.Drawing.Point(12, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 2;
@@ -208,7 +204,7 @@
             // 
             // GV_txtSearch
             // 
-            this.GV_txtSearch.Location = new System.Drawing.Point(72, 70);
+            this.GV_txtSearch.Location = new System.Drawing.Point(67, 157);
             this.GV_txtSearch.Name = "GV_txtSearch";
             this.GV_txtSearch.Size = new System.Drawing.Size(247, 20);
             this.GV_txtSearch.TabIndex = 3;
@@ -216,7 +212,7 @@
             // 
             // GV_btn_delete
             // 
-            this.GV_btn_delete.Location = new System.Drawing.Point(718, 635);
+            this.GV_btn_delete.Location = new System.Drawing.Point(12, 118);
             this.GV_btn_delete.Name = "GV_btn_delete";
             this.GV_btn_delete.Size = new System.Drawing.Size(75, 23);
             this.GV_btn_delete.TabIndex = 4;
@@ -226,7 +222,7 @@
             // 
             // GV_btn_update
             // 
-            this.GV_btn_update.Location = new System.Drawing.Point(600, 635);
+            this.GV_btn_update.Location = new System.Drawing.Point(93, 118);
             this.GV_btn_update.Name = "GV_btn_update";
             this.GV_btn_update.Size = new System.Drawing.Size(75, 23);
             this.GV_btn_update.TabIndex = 5;
@@ -236,7 +232,7 @@
             // 
             // GV_btn_add
             // 
-            this.GV_btn_add.Location = new System.Drawing.Point(490, 635);
+            this.GV_btn_add.Location = new System.Drawing.Point(12, 78);
             this.GV_btn_add.Name = "GV_btn_add";
             this.GV_btn_add.Size = new System.Drawing.Size(75, 23);
             this.GV_btn_add.TabIndex = 6;
@@ -244,41 +240,11 @@
             this.GV_btn_add.UseVisualStyleBackColor = true;
             this.GV_btn_add.Click += new System.EventHandler(this.GV_btn_add_Click);
             // 
-            // HS_btn_add
-            // 
-            this.HS_btn_add.Location = new System.Drawing.Point(490, 635);
-            this.HS_btn_add.Name = "HS_btn_add";
-            this.HS_btn_add.Size = new System.Drawing.Size(75, 23);
-            this.HS_btn_add.TabIndex = 9;
-            this.HS_btn_add.Text = "Thêm";
-            this.HS_btn_add.UseVisualStyleBackColor = true;
-            // 
-            // HS_btn_update
-            // 
-            this.HS_btn_update.Location = new System.Drawing.Point(600, 635);
-            this.HS_btn_update.Name = "HS_btn_update";
-            this.HS_btn_update.Size = new System.Drawing.Size(75, 23);
-            this.HS_btn_update.TabIndex = 8;
-            this.HS_btn_update.Text = "Sửa";
-            this.HS_btn_update.UseVisualStyleBackColor = true;
-            // 
-            // HS_btn_delete
-            // 
-            this.HS_btn_delete.Location = new System.Drawing.Point(718, 635);
-            this.HS_btn_delete.Name = "HS_btn_delete";
-            this.HS_btn_delete.Size = new System.Drawing.Size(75, 23);
-            this.HS_btn_delete.TabIndex = 7;
-            this.HS_btn_delete.Text = "Xóa";
-            this.HS_btn_delete.UseVisualStyleBackColor = true;
-            // 
             // Main
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(873, 670);
-            this.Controls.Add(this.HS_btn_add);
-            this.Controls.Add(this.HS_btn_update);
-            this.Controls.Add(this.HS_btn_delete);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(720, 530);
             this.Controls.Add(this.GV_btn_add);
             this.Controls.Add(this.GV_btn_update);
             this.Controls.Add(this.GV_btn_delete);
@@ -287,7 +253,7 @@
             this.Controls.Add(this.mainDGV);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximumSize = new System.Drawing.Size(1200, 1000);
+            this.MaximumSize = new System.Drawing.Size(736, 569);
             this.MinimumSize = new System.Drawing.Size(736, 569);
             this.Name = "Main";
             this.Text = "Form1";
@@ -323,9 +289,6 @@
         private System.Windows.Forms.Button GV_btn_delete;
         private System.Windows.Forms.Button GV_btn_update;
         private System.Windows.Forms.Button GV_btn_add;
-        private System.Windows.Forms.Button HS_btn_add;
-        private System.Windows.Forms.Button HS_btn_update;
-        private System.Windows.Forms.Button HS_btn_delete;
     }
 }
 

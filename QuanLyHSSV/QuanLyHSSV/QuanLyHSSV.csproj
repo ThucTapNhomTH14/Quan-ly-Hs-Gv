@@ -47,23 +47,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="connectionString.cs" />
-    <Compile Include="formSuaHS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formSuaHS.Designer.cs">
-      <DependentUpon>formSuaHS.cs</DependentUpon>
-    </Compile>
     <Compile Include="formSuaGV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formSuaGV.Designer.cs">
       <DependentUpon>formSuaGV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="formThemHS.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formThemHS.Designer.cs">
-      <DependentUpon>formThemHS.cs</DependentUpon>
     </Compile>
     <Compile Include="formThemGV.cs">
       <SubType>Form</SubType>
@@ -79,14 +67,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="formSuaHS.resx">
-      <DependentUpon>formSuaHS.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="formSuaGV.resx">
       <DependentUpon>formSuaGV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="formThemHS.resx">
-      <DependentUpon>formThemHS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formThemGV.resx">
       <DependentUpon>formThemGV.cs</DependentUpon>
