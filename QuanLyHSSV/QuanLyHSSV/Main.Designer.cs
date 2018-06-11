@@ -252,6 +252,8 @@
             this.HS_btn_add.TabIndex = 9;
             this.HS_btn_add.Text = "Thêm";
             this.HS_btn_add.UseVisualStyleBackColor = true;
+            this.HS_btn_add.Click += new System.EventHandler(this.HS_btn_add_Click);
+
             // 
             // HS_btn_update
             // 
@@ -270,6 +272,7 @@
             this.HS_btn_delete.TabIndex = 7;
             this.HS_btn_delete.Text = "Xóa";
             this.HS_btn_delete.UseVisualStyleBackColor = true;
+            this.HS_btn_delete.Click += new System.EventHandler(this.HS_btn_delete_Click);
             // 
             // Main
             // 

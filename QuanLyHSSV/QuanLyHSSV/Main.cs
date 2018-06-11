@@ -33,6 +33,7 @@ namespace QuanLyHSSV
         //xem list GV
         private void hồSơToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            toggle_HS_off();
             toggle_GV_on();
             refresh_GV(-1);
         }
@@ -150,6 +151,7 @@ namespace QuanLyHSSV
         //xem list 
         private void lýLịchToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            toggle_GV_off();
             toggle_HS_on();
             refresh_HS(-1);
         }
